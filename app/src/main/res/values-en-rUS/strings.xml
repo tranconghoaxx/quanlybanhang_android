@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Manager Medicine</string>
+    <string name="appname">Manager Employee</string>
+    <string name="thongtin">Employee Imformation</string>
+
+    <string name="thongtinHoaDon">Bill Imformation</string>
+    <string name="thongtinChiTietHoaDon">Bill Imformatio detail</string>
+
+    <string name="thongtinSanPham">Product Imformation</string>
+
+    <string name="hoTen">Employee Code</string>
+    <string name="ma">Employee name</string>
+    <string name="diachi">Phone</string>
+    <string name="chucnang">Function</string>
+    <string name="them">Add</string>
+    <string name="xoa">Delete</string>
+    <string name="sua">Update</string>
+    <string name="clean">Clear</string>
+    <string name="thoat">Exit</string>
+    <string name="hoTen1">Enter name medicine</string>
+    <string name="ma1">Enter medicine code</string>
+    <string name="diachi1">Location medicine</string>
+    <string name="thongtin1">Medicine imformation</string>
+    <string name="ds1">List Medicine</string>
+    <string name="ds">List Employee</string>
+    <string name="qltiemthuoc">Medicine manager</string>
+    <string name="qlthuoc">Medicine Manager</string>
+    <string name="cthoadon">Detail Bill</string>
+    <string name="sanpham">Products</string>
+    <string name="nam">Man</string>
+    <string name="nu">Woman</string>
+</resources>

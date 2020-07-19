@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Quản Lý Bán Hàng</string>
+    <string name="appname">Quản Lý Nhân Viên</string>
+    <string name="thongtin">Thông Tin Nhân Viên</string>
+
+    <string name="thongtinHoaDon">Thông Tin Hóa Đơn</string>
+    <string name="thongtinChiTietHoaDon">Thông Tin Chi Tiết Hóa Đơn</string>
+    <string name="thongtinSanPham">Thông Tin Chi Sản Phẩm</string>
+
+    <string name="hoTen">Nhập Mã Nhân Viên</string>
+    <string name="ma">Nhập Tên Nhân Viên </string>
+    <string name="diachi">Nhập Điện Thoại</string>
+    <string name="chucnang">Chức Năng</string>
+
+    <string name="them">Thêm</string>
+    <string name="xoa">Xóa</string>
+    <string name="sua">Sửa</string>
+    <string name="clean">Làm Mới</string>
+    <string name="thoat">Thoát</string>
+
+    <string name="hoTen1">Nhập Tên thuốc</string>
+    <string name="ma1">Nhập Mã thuốc </string>
+    <string name="diachi1">Nơi nhập thuốc</string>
+    <string name="thongtin1"> Thông Tin Thuốc </string>
+    <string name="ds1">Danh Sách thuốc </string>
+
+    <string name="ds">Danh Sách Nhân Viên </string>
+    <string name="qltiemthuoc">Nhân Viên</string>
+    <string name="qlthuoc">Hóa Đơn</string>
+    <string name="cthoadon">Chi Tiết Hóa Đơn</string>
+    <string name="sanpham">Sản Phẩm</string>
+
+
+    <string name="nam">Nam</string>
+    <string name="nu">Nữ</string>
+
+</resources>

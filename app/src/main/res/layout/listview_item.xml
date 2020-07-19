@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imgGT"
+        style="@style/itemImgGT" />
+
+    <LinearLayout
+     style="@style/itemLineLayout">
+
+        <TextView
+            android:id="@+id/tvHoten"
+            style="@style/itemTV"
+            android:text="Nguyển văn hóa" />
+
+        <TextView
+            android:id="@+id/tvMaNV"
+            style="@style/itemTV"
+            android:text="A111" />
+
+        <TextView
+            android:id="@+id/tvDienThoai"
+          style="@style/itemTV"
+            android:text="099999" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgDetail"
+        style="@style/itemImgDetail"
+        android:src="@drawable/ic_folder_shared_black_24dp" />
+
+</LinearLayout>

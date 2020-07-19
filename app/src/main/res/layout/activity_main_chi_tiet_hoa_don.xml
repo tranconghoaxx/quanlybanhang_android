@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="GiaoDien.MainActivity">
+    <TextView
+        style="@style/tieude"
+        android:text="@string/thongtinChiTietHoaDon" />
+
+
+
+
+    <EditText
+        android:id="@+id/txtMa"
+        style="@style/txt"
+        android:hint="@string/ma" />
+
+    <EditText
+        android:id="@+id/txtHoTen"
+        style="@style/txt"
+        android:hint="@string/hoTen" />
+
+    <EditText
+        android:id="@+id/txtDienThoai"
+        style="@style/txt"
+        android:hint="@string/diachi" />
+
+    <RadioGroup style="@style/rdGroup">
+
+        <RadioButton
+            android:id="@+id/radNam"
+            style="@style/rdbtn" />
+
+        <RadioButton
+            android:id="@+id/radNu"
+            style="@style/rdbtnNu" />
+    </RadioGroup>
+
+
+    <TextView
+        style="@style/tieude"
+        android:text="@string/chucnang" />
+
+    <LinearLayout style="@style/chucnang">
+
+        <Button
+            android:id="@+id/btnThem"
+            style="@style/btn"
+            android:background="@drawable/them"
+            android:text="@string/them" />
+
+        <Button
+            android:id="@+id/btnxoa"
+            style="@style/btn"
+            android:background="@drawable/xoa"
+            android:text="@string/xoa" />
+
+        <Button
+            android:id="@+id/btnsua"
+            style="@style/btn"
+            android:background="@drawable/sua"
+
+            android:text="@string/sua" />
+
+        <Button
+            android:id="@+id/btnclean"
+            style="@style/btn"
+            android:background="@drawable/xoa"
+            android:text="@string/clean" />
+
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/tieude"
+        android:text="@string/ds" />
+    <ListView
+        android:id="@+id/lvDanhSach"
+        style="@style/lv"></ListView>
+
+</LinearLayout>
