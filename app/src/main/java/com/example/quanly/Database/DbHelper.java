@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DbHelper extends SQLiteOpenHelper {
 
-
+//    public static final String Table2 = "create table HoaDon(ngaylaphoadon text, mahoadon text, manhanvien text);";
     public DbHelper(Context context) {
         super(context, "QLNhanVien", null, 1);
     }
@@ -15,7 +15,11 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String sql = "create table NhanVien(hoten text, manhanvien text, dienthoai text, gioitinh text)";
+        String sqlTableHoaDon = "create table HoaDon(mahoadon text, ngaylaphoadon text, manhanvien text)";
+        String sqlTableSanPham = "create table SanPham(dongia text, dvtinh text, masanpham text, tensanpham text)";
         db.execSQL(sql);
+        db.execSQL(sqlTableHoaDon);
+        db.execSQL(sqlTableSanPham);
     }
 
     @Override

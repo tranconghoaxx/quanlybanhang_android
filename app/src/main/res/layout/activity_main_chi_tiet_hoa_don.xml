@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="GiaoDien.MainActivity">
+    tools:context=".GiaoDien.MainActivityNhanVien">
     <TextView
         style="@style/tieude"
         android:text="@string/thongtinChiTietHoaDon" />
@@ -14,30 +14,19 @@
 
 
     <EditText
-        android:id="@+id/txtMa"
+        android:id="@+id/txtMaHD"
         style="@style/txt"
-        android:hint="@string/ma" />
+        android:hint="@string/maHD" />
 
     <EditText
-        android:id="@+id/txtHoTen"
+        android:id="@+id/txtMaSP"
         style="@style/txt"
-        android:hint="@string/hoTen" />
+        android:hint="@string/maSP" />
 
     <EditText
-        android:id="@+id/txtDienThoai"
+        android:id="@+id/txtSoLuongSP"
         style="@style/txt"
-        android:hint="@string/diachi" />
-
-    <RadioGroup style="@style/rdGroup">
-
-        <RadioButton
-            android:id="@+id/radNam"
-            style="@style/rdbtn" />
-
-        <RadioButton
-            android:id="@+id/radNu"
-            style="@style/rdbtnNu" />
-    </RadioGroup>
+        android:hint="@string/soluongSP" />
 
 
     <TextView
@@ -76,9 +65,9 @@
 
     <TextView
         style="@style/tieude"
-        android:text="@string/ds" />
+        android:text="@string/danhSachChiTietHD" />
     <ListView
-        android:id="@+id/lvDanhSach"
+        android:id="@+id/lvDanhSachChiTietHD"
         style="@style/lv"></ListView>
 
 </LinearLayout>

@@ -5,9 +5,18 @@
     <string name="thongtin">Employee Imformation</string>
 
     <string name="thongtinHoaDon">Bill Imformation</string>
+<!--    chi tiet hoa don-->
     <string name="thongtinChiTietHoaDon">Bill Imformatio detail</string>
+    <string name="maSP">Enter code product</string>
+    <string name="soluongSP">Enter amount product</string>
+    <string name="danhSachChiTietHD">List Detail Bill</string>
 
+<!--    San pham-->
+    <string name="danhSachSP">List Product</string>
+    <string name="tenSP">Name of product</string>
     <string name="thongtinSanPham">Product Imformation</string>
+    <string name="donviTinhSP">Unit of product</string>
+    <string name="donGiaSP">Price</string>
 
     <string name="hoTen">Employee Code</string>
     <string name="ma">Employee name</string>
@@ -18,11 +27,15 @@
     <string name="sua">Update</string>
     <string name="clean">Clear</string>
     <string name="thoat">Exit</string>
-    <string name="hoTen1">Enter name medicine</string>
-    <string name="ma1">Enter medicine code</string>
-    <string name="diachi1">Location medicine</string>
+
+    <string name="ngayLapHD">Enter date establish bill</string>
+
+    <string name="maHD">Enter bill code </string>
+    <string name="maNhanVien">Enter code employee</string>
+
     <string name="thongtin1">Medicine imformation</string>
-    <string name="ds1">List Medicine</string>
+
+    <string name="dsHoaDon">List Bill </string>
     <string name="ds">List Employee</string>
     <string name="qltiemthuoc">Medicine manager</string>
     <string name="qlthuoc">Medicine Manager</string>

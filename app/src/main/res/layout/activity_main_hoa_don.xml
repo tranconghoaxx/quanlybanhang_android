@@ -11,22 +11,22 @@
 
     <TextView
         style="@style/tieude"
-        android:text="@string/thongtin1" />
+        android:text="@string/thongtinHoaDon" />
 
     <EditText
-        android:id="@+id/txtMa"
+        android:id="@+id/txtMaHoaDon"
         style="@style/txt"
-        android:hint="@string/ma1" />
+        android:hint="@string/maHD" />
 
     <EditText
-        android:id="@+id/txtHoTen"
+        android:id="@+id/txtNgayLapHD"
         style="@style/txt"
-        android:hint="@string/hoTen1" />
+        android:hint="@string/ngayLapHD" />
 
     <EditText
-        android:id="@+id/txtDiaChi"
+        android:id="@+id/txtMaNVHD"
         style="@style/txt"
-        android:hint="@string/diachi1" />
+        android:hint="@string/maNhanVien" />
 
     <TextView
         style="@style/tieude"
@@ -36,26 +36,26 @@
     <LinearLayout style="@style/chucnang">
 
         <Button
-            android:id="@+id/btnThem"
+            android:id="@+id/btnThemHD"
             style="@style/btn"
             android:background="@drawable/them"
             android:text="@string/them" />
 
         <Button
-            android:id="@+id/btnxoa"
+            android:id="@+id/btnxoaHD"
             style="@style/btn"
             android:background="@drawable/xoa"
             android:text="@string/xoa" />
 
         <Button
-            android:id="@+id/btnsua"
+            android:id="@+id/btnsuaHD"
             style="@style/btn"
             android:background="@drawable/sua"
 
             android:text="@string/sua" />
 
         <Button
-            android:id="@+id/btnclean"
+            android:id="@+id/btncleanHD"
             style="@style/btn"
             android:background="@drawable/xoa"
             android:text="@string/clean" />
@@ -65,7 +65,9 @@
 
     <TextView
         style="@style/tieude"
-        android:text="@string/ds1" />
-
+        android:text="@string/dsHoaDon" />
+    <ListView
+        android:id="@+id/lvDanhSachHD"
+        style="@style/lv"></ListView>
 
 </LinearLayout>

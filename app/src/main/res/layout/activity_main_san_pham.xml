@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="GiaoDien.MainActivity">
+    tools:context=".GiaoDien.MainActivityNhanVien">
     <TextView
         style="@style/tieude"
         android:text="@string/thongtinSanPham" />
@@ -14,30 +14,24 @@
 
 
     <EditText
-        android:id="@+id/txtMa"
+        android:id="@+id/txtMaSP"
         style="@style/txt"
-        android:hint="@string/ma" />
+        android:hint="@string/maSP" />
 
     <EditText
-        android:id="@+id/txtHoTen"
+        android:id="@+id/txtTenSP"
         style="@style/txt"
-        android:hint="@string/hoTen" />
+        android:hint="@string/tenSP" />
 
     <EditText
-        android:id="@+id/txtDienThoai"
+        android:id="@+id/txtDonViSP"
         style="@style/txt"
-        android:hint="@string/diachi" />
+        android:hint="@string/donviTinhSP" />
+    <EditText
+        android:id="@+id/txtDonGiaSP"
+        style="@style/txt"
+        android:hint="@string/donGiaSP" />
 
-    <RadioGroup style="@style/rdGroup">
-
-        <RadioButton
-            android:id="@+id/radNam"
-            style="@style/rdbtn" />
-
-        <RadioButton
-            android:id="@+id/radNu"
-            style="@style/rdbtnNu" />
-    </RadioGroup>
 
 
     <TextView
@@ -47,26 +41,26 @@
     <LinearLayout style="@style/chucnang">
 
         <Button
-            android:id="@+id/btnThem"
+            android:id="@+id/btnThemSP"
             style="@style/btn"
             android:background="@drawable/them"
             android:text="@string/them" />
 
         <Button
-            android:id="@+id/btnxoa"
+            android:id="@+id/btnxoaSP"
             style="@style/btn"
             android:background="@drawable/xoa"
             android:text="@string/xoa" />
 
         <Button
-            android:id="@+id/btnsua"
+            android:id="@+id/btnsuaSP"
             style="@style/btn"
             android:background="@drawable/sua"
 
             android:text="@string/sua" />
 
         <Button
-            android:id="@+id/btnclean"
+            android:id="@+id/btncleanSP"
             style="@style/btn"
             android:background="@drawable/xoa"
             android:text="@string/clean" />
@@ -76,9 +70,9 @@
 
     <TextView
         style="@style/tieude"
-        android:text="@string/ds" />
+        android:text="@string/danhSachSP" />
     <ListView
-        android:id="@+id/lvDanhSach"
+        android:id="@+id/lvDanhSachSP"
         style="@style/lv"></ListView>
 
 </LinearLayout>

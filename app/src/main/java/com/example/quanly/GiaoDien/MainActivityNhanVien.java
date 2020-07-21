@@ -22,7 +22,7 @@ import com.example.quanly.R;
 import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivityNhanVien extends AppCompatActivity {
     EditText txtHoTen,txtMaNV,txtDienThoai;
     RadioButton radNam,radNu;
     Button btnThem,btnXoa,btnSua,btnLamMoi;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_nhan_vien);
         setControl();
         setEvent();
     }
@@ -141,14 +141,14 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.mnLuu:
-                AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivityNhanVien.this);
                 builder1.setMessage("Đã In");
                 AlertDialog alertDialogSave = builder1.create();
                 alertDialogSave.show();
                 break;
 
             case R.id.mnThoat:
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivityNhanVien.this);
                 builder.setTitle("Thông báo");
                 builder.setMessage("Bạn có muốn thoát?");
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {

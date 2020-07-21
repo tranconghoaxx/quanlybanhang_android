@@ -8,26 +8,29 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.example.quanly.Adapter.CustomAdapterNhanVien;
+import com.example.quanly.Adapter.CustomAdapterHoaDon;
+import com.example.quanly.Database.DbHoaDon;
 import com.example.quanly.Database.DbNhanVien;
+import com.example.quanly.Model.HoaDon;
 import com.example.quanly.Model.NhanVien;
 import com.example.quanly.R;
 
 import java.util.ArrayList;
 
-public class MainHoaDon<pri> extends AppCompatActivity {
+public class MainHoaDon extends AppCompatActivity {
 
-    Button btnXoa, btnSua, btnThem,btnClean;
-    EditText txtMaSV, txtHoTen, txtDiaChi;
-    ListView lvDanhSachSV;
+    Button btnXoaHD, btnSuaHD, btnThemHD,btnCleanHD;
+    EditText txtMaHD, txtNgayLapHD, txtMaNV;
+    ListView lvDanhSachHoaDon;
 
     int index = -1;
-    CustomAdapterNhanVien apdapter;
-    ArrayList<NhanVien> data_SV = new ArrayList<>();
+    CustomAdapterHoaDon apdapter;
+    ArrayList<HoaDon> data_HD = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,104 +41,93 @@ public class MainHoaDon<pri> extends AppCompatActivity {
     }
 
     private void setEvent() {
-
-//        HienThiDL();
-
-
-        btnThem.setOnClickListener(new View.OnClickListener() {
+        HienThiDL();
+        btnThemHD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 ThemDL();
-//                HienThiDL();
+                HienThiDL();
             }
         });
-        btnXoa.setOnClickListener(new View.OnClickListener() {
+        btnXoaHD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NhanVien nhanVien = getSinhVien();
-                DbNhanVien dbSinhVien = new DbNhanVien(getApplicationContext());
-                dbSinhVien.Xoa(nhanVien);
-                data_SV.remove(index);
+                HoaDon hoaDon = getHoaDon();
+                DbHoaDon dbHoaDon = new DbHoaDon(getApplicationContext());
+                dbHoaDon.Xoa(hoaDon);
+                data_HD.remove(index);
                 apdapter.notifyDataSetChanged();
             }
         });
 
-//        lvDanhSachSV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                SinhVien sinhVien = data_SV.get(position);
-//                txtMaSV.setText(sinhVien.getMaSV());
-//                txtDiaChi.setText(sinhVien.getDiaChi());
-//                txtHoTen.setText(sinhVien.getTenSV());
-//
-//
-//
-//                index = position;
-//            }
-//        });
-        btnSua.setOnClickListener(new View.OnClickListener() {
+        btnSuaHD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NhanVien sinhVien = data_SV.get(index);
-                sinhVien.setMaNhanVien(txtMaSV.getText().toString());
-                sinhVien.setHoTen(txtHoTen.getText().toString());
-                sinhVien.setDienThoai(txtDiaChi.getText().toString());
+                HoaDon hoaDon = data_HD.get(index);
+                hoaDon.setMaHoaDon(txtMaHD.getText().toString());
+                hoaDon.setNgayLapHoaDon(txtNgayLapHD.getText().toString());
+                hoaDon.setMaNhanVien(txtMaNV.getText().toString());
 
                 apdapter.notifyDataSetChanged();
             }
         });
-        btnClean.setOnClickListener(new View.OnClickListener() {
+        btnCleanHD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                txtMaSV.setText("");
-                txtHoTen.setText("");
-                txtDiaChi.setText("");
+                txtMaHD.setText("");
+                txtNgayLapHD.setText("");
+                txtMaNV.setText("");
+            }
+        });
+        lvDanhSachHoaDon.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                HoaDon hoaDon = data_HD.get(position);
+                txtMaHD.setText(hoaDon.getMaHoaDon());
+                txtNgayLapHD.setText(hoaDon.getNgayLapHoaDon());
+                txtMaNV.setText(hoaDon.getMaNhanVien());
 
+                index = position;
             }
         });
     }
 
 
-//    private void HienThiDL() {
-//        DBNhaThuoc dbNhaThuoc = new DBNhaThuoc(this);
-//        data_SV = dbNhaThuoc.LayDL();
-//        apdapter = new CustomApdapterSV(this, R.layout.listview_item, data_SV);
-//        lvDanhSachSV.setAdapter(apdapter);
-//    }
+    private void HienThiDL() {
+        DbHoaDon dbHoaDon = new DbHoaDon(this);
+        data_HD = dbHoaDon.LayDL();
+        apdapter = new CustomAdapterHoaDon(this, R.layout.listview_item_hoadon, data_HD);
+        lvDanhSachHoaDon.setAdapter(apdapter);
+    }
 
     private void ThemDL() {
-        DbNhanVien dbNhanVien = new DbNhanVien(this);
-
-        NhanVien sinhVien = new NhanVien();
-        sinhVien.setMaNhanVien(txtMaSV.getText().toString());
-        sinhVien.setHoTen(txtHoTen.getText().toString());
-        sinhVien.setDienThoai(txtDiaChi.getText().toString());
-        dbNhanVien.Them(sinhVien);
-
-
+        DbHoaDon dbHoaDon = new DbHoaDon(this);
+        HoaDon hoaDon = new HoaDon();
+        hoaDon.setMaHoaDon(txtMaHD.getText().toString());
+        hoaDon.setNgayLapHoaDon(txtNgayLapHD.getText().toString());
+        hoaDon.setMaNhanVien(txtMaNV.getText().toString());
+        dbHoaDon.Them(hoaDon);
     }
-
-
-    private NhanVien getSinhVien() {
-        NhanVien sinhVien = new NhanVien();
-        sinhVien.setMaNhanVien(txtMaSV.getText().toString());
-        sinhVien.setHoTen(txtHoTen.getText().toString());
-        sinhVien.setDienThoai(txtDiaChi.getText().toString());
-        return sinhVien;
+    private HoaDon getHoaDon() {
+        HoaDon hoaDon = new HoaDon();
+        hoaDon.setMaHoaDon(txtMaHD.getText().toString());
+        hoaDon.setNgayLapHoaDon(txtNgayLapHD.getText().toString());
+        hoaDon.setMaNhanVien(txtMaNV.getText().toString());
+        return hoaDon;
     }
 
 
     private void setControl() {
-        btnThem = findViewById(R.id.btnThem);
-        btnClean = findViewById(R.id.btnclean);
-        btnXoa = findViewById(R.id.btnxoa);
-        btnSua = findViewById(R.id.btnsua);
-        txtMaSV = findViewById(R.id.txtMa);
-        txtHoTen = findViewById(R.id.txtHoTen);
-        txtDiaChi = findViewById(R.id.txtDiaChi);
-        lvDanhSachSV = findViewById(R.id.lvDanhSach);
+        btnThemHD = findViewById(R.id.btnThemHD);
+        btnCleanHD = findViewById(R.id.btncleanHD);
+        btnXoaHD = findViewById(R.id.btnxoaHD);
+        btnSuaHD = findViewById(R.id.btnsuaHD);
+
+        txtMaHD = findViewById(R.id.txtMaHoaDon);
+        txtNgayLapHD = findViewById(R.id.txtNgayLapHD);
+        txtMaNV = findViewById(R.id.txtMaNVHD);
+
+        lvDanhSachHoaDon = findViewById(R.id.lvDanhSachHD);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {

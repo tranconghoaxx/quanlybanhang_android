@@ -33,7 +33,7 @@ public class MainActivityTrangChu extends AppCompatActivity {
         btntrangNhanVien.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =   new Intent(MainActivityTrangChu.this, MainActivity.class);
+                Intent intent =   new Intent(MainActivityTrangChu.this, MainActivityNhanVien.class);
                 Bundle bundle = new Bundle();
                 intent.putExtras(bundle);
                 startActivity(intent);

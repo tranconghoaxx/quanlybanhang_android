@@ -5,12 +5,23 @@
 
     <string name="thongtinHoaDon">Thông Tin Hóa Đơn</string>
     <string name="thongtinChiTietHoaDon">Thông Tin Chi Tiết Hóa Đơn</string>
-    <string name="thongtinSanPham">Thông Tin Chi Sản Phẩm</string>
+    <string name="thongtinSanPham">Thông Tin Sản Phẩm</string>
 
     <string name="hoTen">Nhập Mã Nhân Viên</string>
     <string name="ma">Nhập Tên Nhân Viên </string>
     <string name="diachi">Nhập Điện Thoại</string>
     <string name="chucnang">Chức Năng</string>
+
+<!--    chi tiet hoa don-->
+    <string name="maSP">Nhập mã sản phẩm</string>
+    <string name="soluongSP">Nhập số lượng sản phẩm</string>
+    <string name="danhSachChiTietHD">Danh Sách Chi Tiết Hóa Đơn</string>
+
+<!--    san pham-->
+    <string name="danhSachSP">Danh Sách Sản Phẩm</string>
+    <string name="tenSP">Tên sản phẩm</string>
+    <string name="donviTinhSP">Đơn vị tính</string>
+    <string name="donGiaSP">Đơn giá</string>
 
     <string name="them">Thêm</string>
     <string name="xoa">Xóa</string>
@@ -18,11 +29,14 @@
     <string name="clean">Làm Mới</string>
     <string name="thoat">Thoát</string>
 
-    <string name="hoTen1">Nhập Tên thuốc</string>
-    <string name="ma1">Nhập Mã thuốc </string>
-    <string name="diachi1">Nơi nhập thuốc</string>
+    <string name="ngayLapHD">Nhập ngày lập hóa đơn</string>
+
+    <string name="maHD">Nhập mã hóa đơn </string>
+
+    <string name="maNhanVien">Nhập mã nhân viên</string>
+
     <string name="thongtin1"> Thông Tin Thuốc </string>
-    <string name="ds1">Danh Sách thuốc </string>
+    <string name="dsHoaDon">Danh Hóa Đơn </string>
 
     <string name="ds">Danh Sách Nhân Viên </string>
     <string name="qltiemthuoc">Nhân Viên</string>
