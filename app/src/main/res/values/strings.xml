@@ -12,12 +12,12 @@
     <string name="diachi">Nhập Điện Thoại</string>
     <string name="chucnang">Chức Năng</string>
 
-<!--    chi tiet hoa don-->
+    <!--    chi tiet hoa don-->
     <string name="maSP">Nhập mã sản phẩm</string>
     <string name="soluongSP">Nhập số lượng sản phẩm</string>
     <string name="danhSachChiTietHD">Danh Sách Chi Tiết Hóa Đơn</string>
 
-<!--    san pham-->
+    <!--    san pham-->
     <string name="danhSachSP">Danh Sách Sản Phẩm</string>
     <string name="tenSP">Tên sản phẩm</string>
     <string name="donviTinhSP">Đơn vị tính</string>
