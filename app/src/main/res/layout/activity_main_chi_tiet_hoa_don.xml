@@ -14,17 +14,17 @@
 
 
     <EditText
-        android:id="@+id/txtMaHD"
+        android:id="@+id/txtMaHDCT"
         style="@style/txt"
         android:hint="@string/maHD" />
 
     <EditText
-        android:id="@+id/txtMaSP"
+        android:id="@+id/txtMaSPCT"
         style="@style/txt"
         android:hint="@string/maSP" />
 
     <EditText
-        android:id="@+id/txtSoLuongSP"
+        android:id="@+id/txtSoLuongSPCT"
         style="@style/txt"
         android:hint="@string/soluongSP" />
 
@@ -36,26 +36,26 @@
     <LinearLayout style="@style/chucnang">
 
         <Button
-            android:id="@+id/btnThem"
+            android:id="@+id/btnThemCT"
             style="@style/btn"
             android:background="@drawable/them"
             android:text="@string/them" />
 
         <Button
-            android:id="@+id/btnxoa"
+            android:id="@+id/btnxoaCT"
             style="@style/btn"
             android:background="@drawable/xoa"
             android:text="@string/xoa" />
 
         <Button
-            android:id="@+id/btnsua"
+            android:id="@+id/btnsuaCT"
             style="@style/btn"
             android:background="@drawable/sua"
 
             android:text="@string/sua" />
 
         <Button
-            android:id="@+id/btnclean"
+            android:id="@+id/btncleanCT"
             style="@style/btn"
             android:background="@drawable/xoa"
             android:text="@string/clean" />

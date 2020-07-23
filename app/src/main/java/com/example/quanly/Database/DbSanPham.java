@@ -52,6 +52,7 @@ public class DbSanPham {
         String sql = "select * from SanPham";
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
+
         try {
             cursor.moveToFirst();
             do {
