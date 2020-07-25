@@ -60,7 +60,7 @@ public class MainActivityStart extends MenuActivity {
                 Intent intent = new Intent(MainActivityStart.this,MainActivityTrangChu.class);
                 startActivity(intent);
             }
-        },3000);
+        },5000);
     }
 
     private void setProgressAnimation() {

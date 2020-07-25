@@ -16,52 +16,64 @@
         <item name="android:gravity">center</item>
         <item name="android:textColor">#E90707</item>
     </style>
+
     <style name="tieude">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">#9DECDA</item>
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">#E97E2B</item>
     </style>
+
     <style name="tieude1">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        1        <item name="android:background">#EFCC06</item>
+        <item name="android:background">#EFCC06</item>
         <item name="android:textSize">30sp</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">#E97E2B</item>
     </style>
+
     <style name="thongtin">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
     <style name="chucnang">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:gravity">center</item>
     </style>
+
     <style name="btn">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
 
-    </style> <style name="btnchuyentrang">
-    <item name="android:layout_width">wrap_content</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:gravity">center</item>
-</style>
+    </style>
+
+    <style name="btnchuyentrang">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorAccent</item>
+
+    </style>
 
     <style name="btnimg">
         <item name="android:layout_width">50dp</item>
         <item name="android:layout_height">50dp</item>
         <item name="android:gravity">center</item>
     </style>
+
     <style name="txt">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
     <style name="lv">
         <item name="android:padding">20dp</item>
         <item name="android:layout_width">match_parent</item>
@@ -74,23 +86,41 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
     <style name="rdbtnNu">
         <item name="android:checked">true</item>
         <item name="android:text">@string/nu</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
     <style name="rdGroup">
         <item name="android:orientation">horizontal</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-<!--    item-->
+    <!--    item-->
     <style name="itemImgGT">
         <item name="android:layout_width">73dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:src">@drawable/nam</item>
     </style>
+    <style name="imgHoaDon">
+        <item name="android:layout_width">73dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:src">@drawable/bill_icon</item>
+    </style>
+    <style name="imgSanPham">
+        <item name="android:layout_width">73dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:src">@drawable/product_icon</item>
+    </style>
+    <style name="imgChiTietHoaDon">
+        <item name="android:layout_width">73dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:src">@drawable/bill_detail_icon</item>
+    </style>
+
     <style name="itemLineLayout">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -99,10 +129,12 @@
         <item name="android:background">@color/colorAccent</item>
         <item name="android:orientation">vertical</item>
     </style>
+
     <style name="itemTV">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">20dp</item>
     </style>
+
     <style name="itemImgDetail">
         <item name="android:layout_width">50dp</item>
         <item name="android:layout_height">50dp</item>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#151A28"
+    android:background="#FAF9F9"
     android:gravity="center">
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
         <ImageView
             android:id="@+id/img_cat"
             android:layout_width="60dp"
-            android:layout_height="30dp"
+            android:layout_height="100dp"
             android:src="@drawable/runningcat"/>
         <ProgressBar
             android:id="@+id/progress_id"

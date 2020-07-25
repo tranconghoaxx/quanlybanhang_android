@@ -41,9 +41,9 @@ public class CustomAdapterChiTiet extends ArrayAdapter {
         if (view == null){
             holder = new CustomAdapterChiTiet.Holder();
             view = LayoutInflater.from(context).inflate(resource,null);
-            holder.tvMaHDCT = view.findViewById(R.id.tvMaHD);
-            holder.tvMaSPHDCT = view.findViewById(R.id.tvNgayLapHD);
-            holder.tvSoluongCT = view.findViewById(R.id.tvMaNV);
+            holder.tvMaHDCT = view.findViewById(R.id.tvMaHDCT);
+            holder.tvMaSPHDCT = view.findViewById(R.id.tvMaSPCT);
+            holder.tvSoluongCT = view.findViewById(R.id.tvSoLuongSPCT);
 
             view.setTag(holder);
         }else {
