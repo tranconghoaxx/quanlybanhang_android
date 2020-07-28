@@ -2,6 +2,8 @@ package com.example.quanly.GiaoDien;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,21 +14,47 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.quanly.Adapter.MyRecyclerViewAdapter;
+import com.example.quanly.Model.CardViewModel;
 import com.example.quanly.R;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 
 public class MainActivityTrangChu extends AppCompatActivity {
     Button btntrangNhanVien,btntrangHoaDon,btntrangChiTietHoaDon,btntrangSanPham;
     ListView lvDanhSachSV;
     int index = -1;
 
+    private Vector<CardViewModel> data;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_trang_chu);
+        initRecycleViews();
         setControl();
         setEvent();
+    }
+    void initRecycleViews(){
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        //Initiation of data
+        data = new Vector<CardViewModel>();
+        data.add(new CardViewModel("Cửa Hàng 1", R.drawable.bach_hoa_xanh));
+        data.add(new CardViewModel("Cửa Hàng 2", R.drawable.coop_food));
+        data.add(new CardViewModel("Cửa Hàng 3", R.drawable.vinmart_14));
+        data.add(new CardViewModel("Cửa Hàng 4", R.drawable.bach_hoa_xanh));
 
+        //Setup Recycler View
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        //GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
+        recyclerView.setLayoutManager(layoutManager);
+
+        MyRecyclerViewAdapter adapter = new MyRecyclerViewAdapter(R.layout.cardview_item_cuahang, data);
+        recyclerView.setAdapter(adapter);
     }
 
     private void setEvent() {
@@ -117,12 +145,6 @@ public class MainActivityTrangChu extends AppCompatActivity {
                 alertDialog.show();
                 break;
 
-//            case R.id.mnChuyen:
-//                Intent intent = new Intent(MainActivity.this,Main2Activity.class);
-//                startActivity(intent);
-//                break;
-//            default:
-//                throw new IllegalStateException("Unexpected value: " + item.getItemId());
         }
         return super.onOptionsItemSelected(item);
     }

@@ -1,7 +1,5 @@
 package com.example.quanly.GiaoDien;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
@@ -16,7 +14,6 @@ import android.widget.TextView;
 import com.example.quanly.R;
 
 import ThuVien.progressbaranimation;
-import ThuVien.setinterval_animation;
 
 public class MainActivityStart extends MenuActivity {
 
@@ -26,7 +23,7 @@ public class MainActivityStart extends MenuActivity {
     //Hooks
     ImageView img_cat;
     //animation
-    Animation bottomanimation, first_anima, second_anima, third_anima, fourth_anima, fifth_anima, sixth_anima, btnAnimation, btnAnimation_click, img_animation;
+    Animation bottomanimation, first_anima, second_anima, third_anima, fourth_anima, fifth_anima, sixth_anima, btnAnimation, img_animation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,9 +39,7 @@ public class MainActivityStart extends MenuActivity {
         bottomanimation = AnimationUtils.loadAnimation(this,R.anim.bottom_animaton);
         btnAnimation = AnimationUtils.loadAnimation(this, R.anim.buttom_anima);
         btnAnimation.setStartOffset(3000);
-        btnAnimation_click = AnimationUtils.loadAnimation(this,R.anim.btn_to_click);
-        setinterval_animation setinterval = new setinterval_animation(0.2,20);
-        btnAnimation_click.setInterpolator(setinterval);
+
         img_animation = AnimationUtils.loadAnimation(this,R.anim.img_animation);
         setControl();
         setAnima();
