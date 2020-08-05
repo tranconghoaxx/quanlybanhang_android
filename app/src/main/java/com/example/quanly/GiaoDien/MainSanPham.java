@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.quanly.Adapter.CustomAdapterHoaDon;
@@ -25,7 +26,7 @@ import java.util.ArrayList;
 
 public class MainSanPham extends AppCompatActivity {
 
-
+    ImageView imgBack;
     Button btnXoaSP, btnSuaSP, btnThemSP,btnCleanSP;
     EditText txtMaSP, txtTenSP, txtDVTinh,txtDonGia;
     ListView lvDanhSachSanPham;
@@ -39,9 +40,17 @@ public class MainSanPham extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_san_pham);
         setControl();
+        backControl();
         setEvent();
     }
-
+    private void backControl() {
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+    }
     private void setEvent() {
         HienThiDL();
         btnThemSP.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +81,8 @@ public class MainSanPham extends AppCompatActivity {
                 sanPham.setDonGia(txtDonGia.getText().toString());
 
                 apdapter.notifyDataSetChanged();
+                DbSanPham dbSanPham = new DbSanPham(getApplicationContext());
+                dbSanPham.Sua(sanPham);
             }
         });
         btnCleanSP.setOnClickListener(new View.OnClickListener() {
@@ -127,6 +138,7 @@ public class MainSanPham extends AppCompatActivity {
 
 
     private void setControl() {
+        imgBack = findViewById(R.id.imgBack);
         btnThemSP = findViewById(R.id.btnThemSP);
         btnCleanSP = findViewById(R.id.btncleanSP);
         btnXoaSP = findViewById(R.id.btnxoaSP);
@@ -138,51 +150,5 @@ public class MainSanPham extends AppCompatActivity {
         txtDonGia = findViewById(R.id.txtDonGiaSP);
 
         lvDanhSachSanPham = findViewById(R.id.lvDanhSachSP);
-    }
-
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_actionbar, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.mnLuu:
-                AlertDialog.Builder builder1 = new AlertDialog.Builder(MainSanPham.this);
-                builder1.setMessage("Đã In");
-                AlertDialog alertDialogSave = builder1.create();
-                alertDialogSave.show();
-                break;
-
-            case R.id.mnThoat:
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainSanPham.this);
-                builder.setTitle("Thông báo");
-                builder.setMessage("Bạn có muốn thoát?");
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-                });
-
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-
-                AlertDialog alertDialog = builder.create();
-                alertDialog.show();
-                break;
-
-//            case R.id.mnChuyen:
-//                Intent intent = new Intent(MainActivity.this,Main2Activity.class);
-//                startActivity(intent);
-//                break;
-//            default:
-//                throw new IllegalStateException("Unexpected value: " + item.getItemId());
-        }
-        return super.onOptionsItemSelected(item);
     }
 }

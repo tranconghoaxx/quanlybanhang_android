@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
 
@@ -23,6 +24,8 @@ import java.util.ArrayList;
 
 
 public class MainActivityNhanVien extends AppCompatActivity {
+    //    back
+    ImageView imgBack;
     EditText txtHoTen,txtMaNV,txtDienThoai;
     RadioButton radNam,radNu;
     Button btnThem,btnXoa,btnSua,btnLamMoi;
@@ -35,7 +38,17 @@ public class MainActivityNhanVien extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_nhan_vien);
         setControl();
+        backControl();
         setEvent();
+    }
+
+    private void backControl() {
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     private void setEvent() {
@@ -60,12 +73,14 @@ public class MainActivityNhanVien extends AppCompatActivity {
         btnSua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                DbNhanVien dbNhanVien = new DbNhanVien(getApplicationContext());
                 NhanVien nhanVien = data_NV.get(index);
                 nhanVien.setHoTen(txtHoTen.getText().toString());
                 nhanVien.setMaNhanVien(txtMaNV.getText().toString());
                 nhanVien.setDienThoai(txtDienThoai.getText().toString());
                 nhanVien.setGioiTinh(radNam.isChecked());
                 adapterNhanVien.notifyDataSetChanged();
+                dbNhanVien.Sua(nhanVien);
             }
         });
         btnLamMoi.setOnClickListener(new View.OnClickListener() {
@@ -122,6 +137,7 @@ public class MainActivityNhanVien extends AppCompatActivity {
     }
 
     private void setControl() {
+        imgBack = findViewById(R.id.imgBack);
         txtHoTen = findViewById(R.id.txtHoTen);
         txtMaNV = findViewById(R.id.txtMa);
         txtDienThoai = findViewById(R.id.txtDienThoai);
@@ -132,46 +148,5 @@ public class MainActivityNhanVien extends AppCompatActivity {
         btnSua = findViewById(R.id.btnsua);
         btnLamMoi = findViewById(R.id.btnclean);
         lvDanhSach = findViewById(R.id.lvDanhSach);
-    }
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_actionbar, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.mnLuu:
-                AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivityNhanVien.this);
-                builder1.setMessage("Đã In");
-                AlertDialog alertDialogSave = builder1.create();
-                alertDialogSave.show();
-                break;
-
-            case R.id.mnThoat:
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivityNhanVien.this);
-                builder.setTitle("Thông báo");
-                builder.setMessage("Bạn có muốn thoát?");
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-                });
-
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-
-                AlertDialog alertDialog = builder.create();
-                alertDialog.show();
-                break;
-
-            case R.id.mnNgonngu:
-
-        }
-        return super.onOptionsItemSelected(item);
     }
 }

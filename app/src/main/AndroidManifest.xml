@@ -4,12 +4,16 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/nhom13icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GiaoDien.MenuActivity"></activity>
+        <activity android:name=".GiaoDien.MainActivityThongKe"
+            ></activity>
+        <activity android:name=".GiaoDien.MainActivityChiTiet" />
+        <activity android:name=".GiaoDien.MainRecyclerView" />
+        <activity android:name=".GiaoDien.MenuActivity" />
         <activity android:name=".GiaoDien.MainActivityStart">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,8 +25,7 @@
         <activity android:name=".GiaoDien.MainChiTietHoaDon" />
         <activity android:name=".GiaoDien.MainHoaDon" />
         <activity android:name=".GiaoDien.MainActivityNhanVien" />
-        <activity android:name=".GiaoDien.MainActivityTrangChu">
-        </activity>
+        <activity android:name=".GiaoDien.MainActivityTrangChu" />
     </application>
 
 </manifest>

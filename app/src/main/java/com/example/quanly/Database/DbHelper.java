@@ -14,7 +14,7 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String sql = "create table NhanVien(hoten text, manhanvien text, dienthoai text, gioitinh text)";
         String sqlTableHoaDon = "create table HoaDon(mahoadon text, ngaylaphoadon text, manhanvien text)";
-        String sqlTableSanPham = "create table SanPham(dongia text, dvtinh text, masanpham text, tensanpham text)";
+        String sqlTableSanPham = "create table SanPham(masanpham text, tensanpham text , dongia text, dvtinh text)";
         String sqlTableChiTiet = "create table ChiTiet(masanpham text, mahoadon text, soluong text)";
         db.execSQL(sql);
         db.execSQL(sqlTableHoaDon);

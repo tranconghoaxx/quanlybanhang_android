@@ -80,5 +80,30 @@ public class DbNhanVien {
         }
         return data;
     }
+    public ArrayList<NhanVien> LayDL(String ma)
+    {
+        ArrayList<NhanVien> data = new ArrayList<>();
+        String sql="select * from NhanVien where manhanvien = '"+ma+"'";
+        SQLiteDatabase db= dbHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(sql,null);
 
+        try {
+            cursor.moveToFirst();
+            do {
+                NhanVien sinhVien = new NhanVien();
+                sinhVien.setMaNhanVien(cursor.getString(0));
+                sinhVien.setHoTen(cursor.getString(1));
+                sinhVien.setDienThoai(cursor.getString(2));
+                data.add(sinhVien);
+            }
+            while (cursor.moveToNext());
+        }
+        catch (Exception ex)
+        {
+
+        }
+
+
+        return  data;
+    }
 }

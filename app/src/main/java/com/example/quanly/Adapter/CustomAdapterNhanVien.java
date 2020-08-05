@@ -1,6 +1,9 @@
 package com.example.quanly.Adapter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.quanly.GiaoDien.MainActivityChiTiet;
 import com.example.quanly.Model.NhanVien;
 import com.example.quanly.R;
 
@@ -58,9 +62,21 @@ public class CustomAdapterNhanVien extends ArrayAdapter {
         }else {
             holder.imgGT.setImageResource(R.drawable.nu);
         }
+
         holder.tvHoTen.setText(nhanVien.getHoTen());
         holder.maNhanVien.setText(nhanVien.getMaNhanVien());
         holder.dienThoai.setText(nhanVien.getDienThoai());
+        holder.imgDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent((Activity) context, MainActivityChiTiet.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("manhanvien", nhanVien.getMaNhanVien());
+                intent.putExtras(bundle);
+                ((Activity) context).startActivity(intent);
+            }
+        });
         return  view;
 
 

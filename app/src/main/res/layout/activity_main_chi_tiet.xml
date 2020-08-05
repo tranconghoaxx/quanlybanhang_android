@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GiaoDien.MainActivityChiTiet">
+    <TextView
+        style="@style/tieude"
+        android:text="@string/thongtin" />
+
+    <EditText
+        android:id="@+id/txtMa"
+        style="@style/txt"
+        android:hint="@string/ma" />
+
+    <EditText
+        android:id="@+id/txtHoTen"
+        style="@style/txt"
+        android:hint="@string/hoTen" />
+
+    <EditText
+        android:id="@+id/txtDiaChi"
+        style="@style/txt"
+        android:hint="@string/diachi" />
+
+    <TextView
+        style="@style/tieude"
+        android:text="@string/chucnang" />
+</LinearLayout>

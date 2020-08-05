@@ -5,17 +5,17 @@
     android:id="@+id/mnLuu"
     android:title="In"
     android:icon="@drawable/ic_save_black_24dp"
-    app:showAsAction="always"
+    app:showAsAction="collapseActionView"
     />
 
     <item
         android:id="@+id/mnThoat"
         android:icon="@drawable/ic_backspace_black_24dp"
         android:title="Thoát"
-        app:showAsAction="always" />
+        app:showAsAction="collapseActionView" />
     <item
         android:id="@+id/mnNgonngu"
 
         android:title="Ngôn ngữ"
-        app:showAsAction="always" />
+        app:showAsAction="collapseActionView" />
 </menu>

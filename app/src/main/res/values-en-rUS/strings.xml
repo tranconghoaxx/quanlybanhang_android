@@ -3,6 +3,7 @@
     <string name="app_name">Manager Medicine</string>
     <string name="appname">Manager Employee</string>
     <string name="thongtin">Employee Imformation</string>
+    <string name="thongke">Statistical</string>
 
     <string name="thongtinHoaDon">Bill Imformation</string>
 <!--    chi tiet hoa don-->

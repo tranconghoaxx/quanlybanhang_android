@@ -2,6 +2,7 @@
     <string name="app_name">Quản Lý Bán Hàng</string>
     <string name="appname">Quản Lý Nhân Viên</string>
     <string name="thongtin">Thông Tin Nhân Viên</string>
+    <string name="thongke">Thống Kê</string>
 
     <string name="thongtinHoaDon">Thông Tin Hóa Đơn</string>
     <string name="thongtinChiTietHoaDon">Thông Tin Chi Tiết Hóa Đơn</string>
